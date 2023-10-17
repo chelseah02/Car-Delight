@@ -4,7 +4,7 @@ Submitted by: **Chelsea Heredia**
 
 About this web app: **This simple app provides a display of cards which potential cars for a buyer to browse through and interact with for their own car tracking purposes. The user can add new cars they have recently seen, edit information about existing ones, and delete cars they are no longer interested in. The total price of all cars is included in the top as well as an individual breakdown of each car's make, model, year, color, price, and a general image in the details page. **
 
-Time spent: **6** hours
+Time spent: **8** hours
 
 ## Required Features
 
@@ -36,8 +36,12 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
+GIF1 shows the PostgreSql connnection, the home page where you see a list of cars and the option to edit, delete them, or view their Read More page. The total price calculated is also present at the top. It also shows the Add Car feature, where once you select your entries, the card is updated and the color of the visual icon card changes based on what is entered. The user can view their choices submitted as a new car to the home screen along with the other list of cars.
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+GIF2 demonstrates deleting cars from both the list card view and from the car's detail page. THe GIF also shows how you can update car from both its detail page and the home list view as well. It demonstrates how the total price changes based on edits and deletes as well. When changes to the color are made, the outside card icon changes color to visualize the effect.
+
+<img src='https://github.com/chelseah02/Car-Delight/blob/main/Cars-GIF1.gif' title='Video Walkthrough 1' width='' alt='Video Walkthrough 1' />
+<img src='https://github.com/chelseah02/Car-Delight/blob/main/Cars-GIF2.gif' title='Video Walkthrough 2' width='' alt='Video Walkthrough 2' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  ScreenToGif
@@ -49,6 +53,7 @@ GIF created with ...  ScreenToGif
 ## Notes
 
 Describe any challenges encountered while building the app or any additional context you'd like to add.
+The only feature I was unable to complete was the feature checking in Adding/Editing a new car to ensure there wouldn't be any invalid entries.
 
 ## License
 
