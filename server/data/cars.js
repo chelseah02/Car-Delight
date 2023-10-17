@@ -1,57 +1,57 @@
 const carData = [
   {
       "id": 1,
-      "price": 20000,
+      "price": 20999,
       "color": "maroon",
       "model": "Civic",
       "year":"2002",
       "make": "Honda",
-      "image":"https://tinyurl.com/39xc9h6y"
+      "image":"https://tinyurl.com/civic-2022"
   },
   {
     "id": 2,
-    "price": 40000,
-    "color": "silver",
+    "price": 18095,
+    "color": "white",
     "model": "Accord",
     "year":"2009",
     "make": "Honda",
-    "image":"https://tinyurl.com/39xc9h6y"
+    "image":"https://tinyurl.com/accord-2022"
     },
     {
         "id": 3,
-        "price": 40000,
-        "color": "black",
-        "model": "Accord",
-        "year":"2014",
+        "price": 29345,
+        "color": "blue",
+        "model": "Odyssey",
+        "year":"2021",
         "make": "Honda",
-        "image":"https://tinyurl.com/39xc9h6y"
+        "image":"https://tinyurl.com/oddesey-02"
     },
     {
         "id": 4,
-        "price": 40000,
-        "color": "blue",
-        "model": "Acura",
+        "price": 54378,
+        "color": "grey",
+        "model": "Highlander",
         "year":"2019",
-        "make": "Honda",
-        "image":"https://tinyurl.com/39xc9h6y"
+        "make": "Toyota",
+        "image":"https://tinyurl.com/toyota-highlander"
     },
     {
         "id": 5,
-        "price": 40000,
+        "price": 32800,
         "color": "red",
         "model": "Lexus",
         "year":"2015",
         "make": "Toyota",
-        "image":"https://tinyurl.com/39xc9h6y"
+        "image":"https://tinyurl.com/lexus-toy"
     },
     {
         "id": 6,
-        "price": 40000,
-        "color": "blue",
-        "model": "Highlander",
+        "price": 47999,
+        "color": "white",
+        "model": "Acura",
         "year":"2018",
-        "make": "Toyota",
-        "image":"https://tinyurl.com/39xc9h6y"
+        "make": "Honda",
+        "image":"https://tinyurl.com/acura-white"
     },
 ]
 

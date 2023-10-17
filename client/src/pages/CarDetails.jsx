@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './CarDetails.css'
 
 const CarDetails = ({data}) => {
@@ -16,6 +17,16 @@ const CarDetails = ({data}) => {
         fetchCarById()
     }, [data, id]);
 
+    const deleteCar = () => {
+
+        const options = {
+            method: 'DELETE'
+        }
+
+        fetch(`http://localhost:3001/cars/${id}`, options)
+        window.location = '/'
+    }
+
     return (
         <div className="CarDetails">
             <main id="car-content" class="car-info">
@@ -30,6 +41,8 @@ const CarDetails = ({data}) => {
                     <p id="year">{'Released In: ' + car.year}</p>
                 </div>
             </main>
+            <button style={{color: "white", backgroundColor: 'green', width: '100%', height:'50px'}}><Link to={'/edit/' + car.id} style={{color: "white"}}>Edit Car</Link></button>
+            <button className='deleteButton' onClick={deleteCar} style={{width: '100%', margin: 'auto'}}>Delete Car</button>
         </div>
     )
 }

@@ -38,7 +38,7 @@ const CreateCar = () => {
             headers: {
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(gift),
+            body: JSON.stringify(car),
         }
 
         fetch('http://localhost:3001/cars', options)
@@ -46,11 +46,11 @@ const CreateCar = () => {
     }
 
     return (
-        <div className='CreateGift'>
+        <div className='CreateCar'>
             <center><h2>Add a Car</h2></center>
             <form>
                 <label>Make</label> <br />
-                <input type='text' id='name' name='name' value={car.make} onChange={handleChange} /><br />
+                <input type='text' id='make' name='make' value={car.make} onChange={handleChange} /><br />
                 <br/>
 
                 <label>Model</label><br />

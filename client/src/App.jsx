@@ -62,12 +62,11 @@ const App = () => {
       <header>
         <div className="header-container">
           <div className="header-left">
-            <img src="/logo.png"/>
-            <h1>Cars</h1>
+            <h1>Chelsea's Cars</h1>
           </div>
           <div className="header-right">
             <Link to="/"><button className="homeBtn">Home</button></Link>
-            <Link to='/new'><button className='addBtn'>+ Add Gift</button></Link>
+            <Link to='/new'><button className='addBtn'>+ Add Car</button></Link>
           </div>
         </div>
       </header>
