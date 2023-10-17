@@ -12,16 +12,22 @@ import { Link } from 'react-router-dom'
 const App = () => {
   
   const [cars, setCars] = useState([]);
-
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     const fetchCars = async () => {
       const response = await fetch('http://localhost:3001/cars')
       const data = await response.json()
       setCars(data)
+      setTotal(calculateTotalPrice(data))
     }
     fetchCars()
   }, []);
+
+  function calculateTotalPrice(cars) {
+    if (!cars) return 0;
+    return cars.reduce((total, car) => total + car.price, 0);
+  };
 
 
   // Sets up routes
@@ -65,7 +71,7 @@ const App = () => {
           </div>
         </div>
       </header>
-
+        <h2>Total Price: ${total}</h2>
         {element}
         
     </div>
