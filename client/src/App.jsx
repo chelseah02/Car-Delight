@@ -1,26 +1,26 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import { useRoutes } from 'react-router-dom'
-import Gifts from './pages/Gifts'
-import CreateGift from './pages/CreateGift'
-import EditGift from './pages/EditGift'
-import GiftDetails from './pages/GiftDetails'
+import Cars from './pages/Cars'
+import CreateCar from './pages/CreateCar'
+import EditCar from './pages/EditCar'
+import CarDetails from './pages/CarDetails'
 import PageNotFound from './pages/PageNotFound'
 import { Link } from 'react-router-dom'
 
 
 const App = () => {
   
-  const [gifts, setGifts] = useState([]);
+  const [cars, setCars] = useState([]);
 
 
   useEffect(() => {
-    const fetchGifts = async () => {
-      const response = await fetch('http://localhost:3001/gifts')
+    const fetchCars = async () => {
+      const response = await fetch('http://localhost:3001/cars')
       const data = await response.json()
-      setGifts(data)
+      setCars(data)
     }
-    fetchGifts()
+    fetchCars()
   }, []);
 
 
@@ -28,19 +28,19 @@ const App = () => {
   let element = useRoutes([
     {
       path: "/",
-      element:<Gifts data={gifts}/>
+      element:<Cars data={cars}/>
     },
     {
-      path:"/gift/:id",
-      element: <GiftDetails data={gifts} />
+      path:"/car/:id",
+      element: <CarDetails data={cars} />
     },
     {
       path: '/new',
-      element: <CreateGift />
+      element: <CreateCar />
     },
     {
       path: '/edit/:id',
-      element: <EditGift data={gifts} />
+      element: <EditCar data={cars} />
     },
     {
       path:"/*",
@@ -57,7 +57,7 @@ const App = () => {
         <div className="header-container">
           <div className="header-left">
             <img src="/logo.png"/>
-            <h1>UnEarthed</h1>
+            <h1>Cars</h1>
           </div>
           <div className="header-right">
             <Link to="/"><button className="homeBtn">Home</button></Link>

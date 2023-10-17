@@ -5,22 +5,27 @@ import more from './more.png'
 
 const Card = (props) => { 
     
-    const [gift, setGift] = useState({id: 0, name: "", pricepoint: "", audience: "", image: ""})
+    const [car, setCar] = useState({id: 0, price: 0, color: "", model: "", year: "", make: "", image: ""})
 
     useEffect(() => {
-        setGift({id: props.id, name: props.name, pricepoint: props.pricepoint, audience: props.audience, image: props.image});
+        setCar({id: props.id, price: props.price, color: props.color, model: props.model, year: props.year, make: props.make, image: props.image});
     }, [props]);
 
+    const cardStyle = {
+        backgroundColor: props.color,
+    };
+
     return (
-        <div className="card">
-            <div className='top-container' style={{ backgroundImage:`url(${gift.image})`}}>
-                <Link to={'/edit/' + gift.id}><img src={more} /></Link>
+        <div className="card" style={cardStyle}>
+            <div className='top-container' style={{ backgroundImage:`url(${car.image})`}}>
+                <Link to={'/edit/' + car.id}><img src={more} /></Link>
             </div>
             <div className='bottom-container'>
-                <h3>{gift.name}</h3>
-                <p>{'Price: ' + gift.pricepoint}</p>
-                <p>{'Great For: ' + gift.audience}</p>
-                <Link to={'/gift/' + gift.id}><a>Read More →</a></Link>
+                <h3>{car.make + ' ' + car.model}</h3>
+                <p>{'Price: ' + car.price}</p>
+                <p>{'Released: ' + car.year}</p>
+                <p>{'Color: ' + car.color}</p>
+                <Link to={'/car/' + car.id}><a>Read More →</a></Link>
             </div>
         </div>
     )
